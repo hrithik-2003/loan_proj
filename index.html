@@ -77,7 +77,7 @@
                     <ul>
                         <li>Utilizing statistical techniques, exploratory data analysis (EDA), and data visualization to uncover patterns and trends.</li>
     
-                        <li>Investigating correlations between variables, identify outliers, and detect potential relationships.</li>
+                        <li>Investigating correlations between variables, identifying outliers, and detecting potential relationships.</li>
                     </ul>
                 </li>
     
@@ -111,12 +111,12 @@
     
                 <li>How do income levels and credit scores correlate with loan approval rates?</li>
     
-                <li>Have customers who already have an account in our bank applied for loan in another bank(s)? If yes, what are some ways to pull the customers?</li>
+                <li>Have customers who already have an account in our bank applied for a loan in another bank(s)? If yes, what are some ways to pull the customers?</li>
     
                 <li>Can we build a predictive model to forecast the likelihood of a customer taking out a loan?</li>
             </ul>
     
-            <p>By dissecting these questions and more, we aim to provide a comprehensive understanding of the dataset's intricacies and its potential implications for our hypothetical bank. </p>
+            <p>By dissecting these questions and more, we aim to comprehensively understand the dataset's intricacies and potential implications for our hypothetical bank. </p>
         </div>
     
         <div class="data_preparation">
@@ -129,11 +129,11 @@
             <ul>
                 <li>
                     <h3>Reliability:</h3>
-                    The Bank Personal Loan dataset is synthetic, which means that it was created by a computer program. This makes it difficult to assess the reliability of the data.
+                    The Bank Personal Loan dataset is synthetic, which means that a computer program created it. This makes it difficult to assess the reliability of the data.
                 </li>
                 <li>
                     <h3>Originality:</h3>
-                    However, this dataset is not original. It was created by a third party person, who based it on a real dataset from a bank.
+                    However, this dataset is not original. It was created by a third-party person, who based it on a real dataset from a bank.
                 </li>
     
                 <li>
@@ -159,9 +159,9 @@
     
             <h2>Data Cleaning:</h2>
     
-            <p>Now, we are going to clean and pre-process the data, which is a crucial step in analysis. This foundational step is importent in ensuring the accuracy and reliability of our upcoming analytical processes.</p>
+            <p>Now, we will clean and pre-process the data, which is a crucial step in the analysis. This foundational step is important in ensuring the accuracy and reliability of our upcoming analytical processes.</p>
     
-            <p>In this section, we are going to use python to clean and pre-process the data.</p>
+            <p>In this section, we are going to use Python to clean and pre-process the data.</p>
     
             <p>The first step is to import the necessary libraries we will use in this process.</p>
     
@@ -188,7 +188,7 @@
     
             <p>The dataset is stored in the variable 'df' and the shape of the data is 5000,14, i.e., it has 5000 rows and 14 columns.</p>
     
-            <p>Now we will look at the first fiew rows of the dataset to get a better grasp.</p>
+            <p>Now we will look at the first few rows of the dataset to get a better grasp.</p>
     
             <pre>
                 <code>
@@ -203,7 +203,7 @@
             <p>Here we can see that the dataset contains 12 columns 'ID', 'Age', 'Experience', 'Income','ZIP Code', 'Family', 'CCAvg', 'Education', 'Mortgage', 'Personal Loan', 'Securities Account', 'CD Account', 'Online' and 'CreditCard'.</p>
             <p>Out of these 'Education', 'Mortgage', 'Personal Loan', 'Securities Account', 'CD Account', 'Online' and 'CreditCard' are categorical values (0 and 1) and the others are ordinal variables.</p>
         
-            <p>Now we shall plot a five summary mean plot of all the non categorical values, i.e., 'Age', 'Experience', 'Family', 'Income' and 'Education'. To get an interactive plot, we will be using plotly for this plot.</p>
+            <p>Now we shall plot a five summary mean plot of all the non-categorical values, i.e., 'Age', 'Experience', 'Family', 'Income', and 'Education'. To get an interactive plot, we will be using Plotly for this plot.</p>
     
             <pre>
                 <code>
@@ -218,7 +218,7 @@
                 <img class="plot" src="resources/op3.jpg" alt="Output 3">
             </div>
             
-            <p>From here, the most import insights can be gained from Age, Experience and Income summaries.</p>
+            <p>From here, the most import insights can be gained from Age, Experience, and Income summaries.</p>
             <ul>
                 <li>
                     <h4>Age:</h4>
@@ -249,7 +249,7 @@
                     </ul>
     
                     <p>In this case as well, the upper fence and max correspond with each other and the lower fence and min correspond with each other. Hence there are no outliers.</p>
-                    <p>However, a point to note is that the minimum value of experience is -3, which directs to the possibility of inconsistency in data in this collumn. We will handle this in the upcoming section.</p>
+                    <p>However, a point to note is that the minimum value of experience is -3, which directs to the possibility of inconsistency in data in this column. We will handle this in the upcoming section.</p>
                 
                 </li>
     
@@ -269,7 +269,7 @@
                 </li>
             </ul>
     
-            <p>Now we shall handle the inconsistency in the Experience column. For this let us first plot a histogram to get a better info about this column. Here, I have used matplotlib to plot the graph.</p>
+            <p>Now we shall handle the inconsistency in the Experience column. For this let us first plot a histogram to get better info about this column. Here, I have used Matplotlib to plot the graph.</p>
         
             <pre>
                 <code>
@@ -351,9 +351,9 @@
                 <img class="table" src="resources/op7.jpg" alt="Output 7">
             </div>
     
-            <p>Here we made a copy of the existing dataset, inorder to keep the original data as is for future purposes. The shape of the processed datset indicates the absence of inconsistent data values.</p>
+            <p>Here we made a copy of the existing dataset, in order to keep the original data as is for future purposes. The shape of the processed dataset indicates the absence of inconsistent data values.</p>
     
-            <p>Now we will handle the outliers in the 'Income' column. Let's count the number of rows with income value higher than the upper-fence (185).</p>
+            <p>Now we will handle the outliers in the 'Income' column. Let's count the number of rows with income values higher than the upper fence (185).</p>
     
             <pre>
                 <code>
@@ -368,9 +368,9 @@
                 <img class="table" src="resources/op8.jpg" alt="Output 8">
             </div>
     
-            <p>There are 96 columns in the dataset as outliers. This makes up almost 2% of the data, which is relatively low. However, these outliers (in this context) cannot simply be romoved, since they could represent individuals with exceptionally high incomes. These profiles might be important for our analysis, as they could be potential high-value customers.</p>
+            <p>There are 96 columns in the dataset as outliers. This makes up almost 2% of the data, which is relatively low. However, these outliers (in this context) cannot simply be removed, since they could represent individuals with exceptionally high incomes. These profiles might be important for our analysis, as they could be potential high-value customers.</p>
         
-            <p>Now let us look at the relation between each columns. This basically means looking at the correlation between any two columns.</p>
+            <p>Now let us look at the relation between each column. This basically means looking at the correlation between any two columns.</p>
     
             <pre>
                 <code>
@@ -381,7 +381,7 @@
             <div class="img_div">
                 <img class="table" src="resources/op9.jpg" alt="Output 9">
             </div>
-            <p>This function shows the correlation between all the columns. In order to get a clearer picture, we shall make a heat map between the correlations. For this we will be using seaborn</p>
+            <p>This function shows the correlation between all the columns. In order to get a clearer picture, we shall make a heat map between the correlations. For this, we will be using seaborn</p>
     
             <pre>
                 <code>
@@ -397,7 +397,7 @@
                 <img class="plot" src="resources/op10.png" alt="Output 10">
             </div>
     
-            <p>Here, brighter the tile, greater is the correlation between the columns. It is clear that other than the correlation of each column on itself, the experience and age column have a large correlation, 0.98. Therefore, in the future, while training an ML model to forecast predictions, one of these columns can be dropped. However, since the age column is necessary in this context, the experience column can be dropped.</p>
+            <p>Here, brighter the tile, greater the correlation between the columns. It is clear that other than the correlation of each column on itself, the experience and age columns have a large correlation, 0.98. Therefore, in the future, while training an ML model to forecast predictions, one of these columns can be dropped. However, since the age column is necessary in this context, the experience column can be dropped.</p>
     
             <p>Note: Further modifications and transformation to the dataset will be done during the course of the analysis based on the requirement.</p>
         
@@ -408,23 +408,23 @@
     
             <p>In this phase, our focus is on the analysis of interrelationships among various factors, with the aim of extracting insights into the important determinants that exert substantial influence on customers' decisions regarding personal loans.</p>
     
-            <h3>Distribution of Education Groups of customes who have personal loan:</h3>
+            <h3>Distribution of Education Groups of customers who have personal loans:</h3>
     
             <p>In this analysis section, we will figure out the percentage of people who are undergrads, graduates, or professionals having personal loans in our bank. The best method of visualizing it it by using a pie-chart.</p>
     
             <p>However, before that, the dataset has the Education values stored as numeric categorical values:</p>
     
             <ul>
-                <li>Education with value 1 : Undergraduates</li>
-                <li>Education with value 2 : Graduates</li>
-                <li>Education with value 3 : Post Graduates or Working Professionals</li>
+                <li>Education with value 1: Undergraduates</li>
+                <li>Education with value 2: Graduates</li>
+                <li>Education with value 3: Post Graduates or Working Professionals</li>
             </ul>
     
-            <p>Therefore, a clearer picture canbe painted by transforming the data by adding a column with the Education data converted into readable form.</p>
+            <p>Therefore, a clearer picture can be painted by transforming the data by adding a column with the Education data converted into readable form.</p>
     
             <pre>
                 <code>
-    #Function to covert the variables into readable format
+    #Function to covert the variables into a readable format
     def education(edu):
         if edu == 1:
             return ('Under Graduate')
@@ -444,7 +444,7 @@
                 <img class="table" src="resources/op11.jpg" alt="Output 11">
             </div>
     
-            <p>Here, we can see that all the categorical values of the Education column are used to make a new column called Education_Data with readable form of data. This helps us to better perceive the data. Now we shall plot the pie chart.</p>
+            <p>Here, we can see that all the categorical values of the Education column are used to make a new column called Education_Data with a readable form of data. This helps us to better perceive the data. Now we shall plot the pie chart.</p>
     
             <pre>
                 <code>
@@ -463,13 +463,13 @@
             <div class="img_div">
                 <img class="plot" src="resources/op12.jpg" alt="Output 11">
             </div>
-            <p>Here, we can see that 42.7% of people who havetaken up personal loan from our bank are working professionals, followed by 37.9% of people, who are graduates. This is logicaly justified since there are very few reasons why an undergrad would take up personal loan.</p>
+            <p>Here, we can see that 42.7% of people who have taken up personal loans from our bank are working professionals, followed by 37.9% of people, who are graduates. This is logically justified since there are very few reasons why an undergrad would take up a personal loan.</p>
     
-            <p>From this plot it is clear that the avertisements and promotions regarding personals will lead to a lerger success when directed towards graduations and professionals.</p>
+            <p>From this plot it is clear that the advertisements and promotions regarding personals will lead to a larger success when directed towards graduations and professionals.</p>
         
-            <h3>Distribution of people with security deposits and/or certificate of deposit (CD) account who also have personal loan(s):</h3>
+            <h3>Distribution of people with security deposits and/or certificate of deposit (CD) accounts who also have personal loan(s):</h3>
     
-            <p>Similar to the previous step, we will convert the numeric Savings and CD data into readable format. We will combine both the variables into the same column for better readability and clarity.</p>
+            <p>Similar to the previous step, we will convert the numeric Savings and CD data into readable format. We will combine both variables into the same column for better readability and clarity.</p>
     
             <pre>
                 <code>
@@ -510,11 +510,11 @@
             <div class="img_div">
                 <img class="plot" src="resources/op14.jpg" alt="Output 14">
             </div>
-            <p>Most of the people who have opted for personal loan from our bank donot hold both security account and certificate of deposit account. In order to counter this several steps can be taken,like targeted marketing campaigns  that specifically highlight the advantages of holding a security account and a certificate of deposit account alongside a personal loan, etc. (More on this later)</p>
+            <p>Most of the people who have opted for personal loans from our bank do not hold both a security account and a certificate of deposit account. In order to counter this several steps can be taken, like targeted marketing campaigns that specifically highlight the advantages of holding a security account and a certificate of deposit account alongside a personal loan, etc. (More on this later)</p>
         
             <h3>Relation between education and income for people who have and have not opted for personal loan</h3>
     
-            <p>In this section we will be looking at the impact of the levels of education of people on their income. Moreover, we will look in to the differences between the overall income levels for people with and without personal loans.</p>
+            <p>In this section we will be looking at the impact of the levels of education of people on their income. Moreover, we will look into the differences between the overall income levels for people with and without personal loans.</p>
         
             <pre>
                 <code>
@@ -547,7 +547,7 @@
     
             <p>Here, we can notice that the overall income levels are lesser for the people without personal loans compared to the people with personal loans. This is possible because of several factors like risk assessment, loan eligibility criteria, creditworthiness, loan purpose, etc.</p>
     
-            <p>Another important information to notice is that for the people who donot have personal loans - </p>
+            <p>Another important piece of information to notice is that for the people who do not have personal loans - </p>
     
             <ul>
                 <li>Undergrads have a median income level of 75000$ per year</li>
@@ -560,7 +560,7 @@
     
             <h3>Relation between family and income for people who have and have not opted for personal loan</h3>
     
-        <p>In this section we will do a similar analysis as the previous plot, i.e, find the impact of family size of the customers who have / have not applied for personal loan.</p>
+        <p>In this section we will do a similar analysis as the previous plot, i.e., find the impact of family size of the customers who have/have not applied for personal loans.</p>
     
         <pre>
             <code>
@@ -591,11 +591,11 @@
                 <img class="plot" style="width: 90%;" src="resources/op16.jpg" alt="Output 16">
             </div>
     
-            <p>Here we can see that in both the cases (people with and without personal loans) there is no strong trend between the number of family members and the income earned by the customers. However,similar to the last case, it is evident that people who earn more are more likely to opt for the personal loan.</p>
+            <p>Here we can see that in both cases (people with and without personal loans) there is no strong trend between the number of family members and the income earned by the customers. However, similar to the last case, it is evident that people who earn more are more likely to opt for a personal loan.</p>
     
             <h3>Income distribution v/s Personal loan status</h3>
     
-            <p>The argument can be made clear by plotting the distribution of number of people who have and have not applied for personal loans v/s income earned.</p>
+            <p>The argument can be made clear by plotting the distribution of the number of people who have and have not applied for personal loans v/s income earned.</p>
     
             <pre>
                 <code>
@@ -613,13 +613,13 @@
                 <img class="plot" src="resources/op17.png" alt="Output 17">
             </div>
     
-            <p>It is clearly evident that a large portion of people earning a lesser amout of money have not opted for personal loans, and the vice versa is true as well. Therefore, certain strategies can be used to pull the eligible customers from all income categories, such as targeted marketing campaigns, and tailored financial education. (More on this later)</p>
+            <p>It is clearly evident that a large portion of people earning a lesser amount of money have not opted for personal loans, and vice versa is true as well. Therefore, certain strategies can be used to pull eligible customers from all income categories, such as targeted marketing campaigns, and tailored financial education. (More on this later)</p>
     
             <h3>Relation between CreditCard status and personal loan:</h3>
     
-            <p>We have covered the impact of income, family size and education status on people's personal loan options. Now we shall cover the next important factor, that is the credit status of people. The credit status of people refers to their financial history and how they have managed credit in the past. It includes factors such as their credit score, which is a numerical representation of their creditworthiness, as well as their history of paying bills, loans, and debts on time. Therefore, naturally, poeple with higher credit status are often offered loans by banks, since  they can inspire a greater level of trust in their financial reliability.</p>
+            <p>We have covered the impact of income, family size, and education status on people's personal loan options. Now we shall cover the next important factor, which is the credit status of people. The credit status of people refers to their financial history and how they have managed credit in the past. It includes factors such as their credit score, which is a numerical representation of their creditworthiness, as well as their history of paying bills, loans, and debts on time. Therefore, naturally, people with higher credit status are often offered loans by banks, since  they can inspire a greater level of trust in their financial reliability.</p>
     
-            <p>Now, we shall check if the availability of credit card with people impacts their choice of opting for a personal loan.</p>
+            <p>Now, we shall check if the availability of credit cards with people impacts their choice of opting for a personal loan.</p>
     
             <pre>
                 <code>
@@ -641,13 +641,13 @@
                 <img class="plot" src="resources/op18.jpg" alt="Output 18">
             </div>
     
-            <p>We can clearly see that with or without credit card(s), the number of people who have opted for personal loans are way less compared to those who have not. However, the overall number of people who donot have a credit card are a lot more. To counter this, our bank may focus on marketing campaigns explaning the benefits of having a credit card, and offer accessible and beginner-friendly credit card options.</p>
+            <p>We can clearly see that with or without credit card(s), the number of people who have opted for personal loans is way less compared to those who have not. However, the overall number of people who do not have a credit card is a lot more. To counter this, our bank may focus on marketing campaigns explaining the benefits of having a credit card, and offer accessible and beginner-friendly credit card options.</p>
     
-            <p>However, this still doesnot have a direct correlation to poeple's choice of opting for personal loans.</p>
+            <p>However, this still does not have a direct correlation to people's choice of opting for personal loans.</p>
     
-            <h3>Relation between average credit spendings and personal </h3>
+            <h3>Relation between average credit spending and personal </h3>
     
-            <p>We donot have information directly pointing towards the credit scores of the people. However we can check out how people's average credit spendings correlates to them opting for personal loans.</p>
+            <p>We do not have information directly pointing toward the credit scores of the people. However, we can check out how people's average credit spending correlates to them opting for personal loans.</p>
     
             <pre>
                 <code>
@@ -663,13 +663,13 @@
                 <img class="plot" src="resources/op19.png" alt="Output 19">
             </div>
     
-            <p>We can see that people who have higher credit spendings tend to opt for personal loans. This might be because they have a track record of managing credit responsibly and may have a higher credit score, making them more attractive candidates for loans with favorable terms and lower interest rates. Additionally, their higher ccavg might indicate a need for additional funds beyond their available credit card limit, leading them to explore personal loan options.</p>
+            <p>We can see that people who have higher credit spending tend to opt for personal loans. This might be because they have a track record of managing credit responsibly and may have a higher credit score, making them more attractive candidates for loans with favorable terms and lower interest rates. Additionally, their higher ccavg might indicate a need for additional funds beyond their available credit card limit, leading them to explore personal loan options.</p>
     
-            <p>Also, we can see that the distribution of people who have low credit spendings is the highest. This means that majority of the customers may not be using credit cards extensively, or may have limited credit spending habits. As a bank, we can help people by educating them the benefits of having a credit card, and as a result having good credit scores. And also, we can provide resources and financial literacy programs to help customers understand the advantages of responsible credit card usage and how it can positively impact their financial well-being.</p>
+            <p>Also, we can see that the distribution of people who have low credit spending is the highest. This means that the majority of the customers may not be using credit cards extensively, or may have limited credit spending habits. As a bank, we can help people by educating them on the benefits of having a credit card, and as a result having good credit scores. And also, we can provide resources and financial literacy programs to help customers understand the advantages of responsible credit card usage and how it can positively impact their financial well-being.</p>
     
-            <h3>Impact of income earn by people and their average credit spendings</h3>
+            <h3>Impact of income earned by people and their average credit spending </h3>
     
-            <p>This section is important to understand what portion of people have lower credit spendings, and what steps can be taken to attract them.</p>
+            <p>This section is important to understand what portion of people have lower credit spending, and what steps can be taken to attract them.</p>
     
             <pre>
                 <code>
@@ -685,13 +685,13 @@
                 <img class="plot" src="resources/op20.png" alt="Output 20">
             </div>
     
-            <p>Here we can see that higher the income earned, higher the people's credit spendings are. This makes sense, as at lower income earning levels, people are generally not in the condition to opt for credit spendings where they have to return the money with interests.</p>
+            <p>Here we can see that higher the income earned, higher the people's credit spendings are. This makes sense, as at lower income earning levels, people are generally not in the condition to opt for credit spending where they have to return the money with interest.</p>
     
-            <p>One more interesting thing to note is that at the same income level (especially at lower income), people with higher credit spendings have opted for personal loans from our bank. This is logically correct as well, as people with higher credt spndings tend to have higher credit scores (as discussed in the previous analysis) and hence are more willing to opt for loans.</p>
+            <p>One more interesting thing to note is that at the same income level (especially at lower income), people with higher credit spending have opted for personal loans from our bank. This is logically correct as well, as people with higher credit spending tend to have higher credit scores (as discussed in the previous analysis) and hence are more willing to opt for loans.</p>
     
             <h3>Impact of online banking:</h3>
     
-            <p>Now we shall look if people who bank online have higher/lower chance at opting for personal loans.</p>
+            <p>Now we shall look if people who bank online have a higher/lower chance of opting for personal loans.</p>
     
             <p>For that, first we shall look at the overall distribution of people based on their online banking usage.</p>
     
@@ -706,13 +706,13 @@
                 <img class="plot" src="resources/op21.jpg" alt="Output 21">
             </div>
     
-            <p>Here we can see that more people have opted for online banking (about 60% of the total customers). This might be because of the convenience and accebility which comes with it. </p>
+            <p>Here we can see that more people have opted for online banking (about 60% of the total customers). This might be because of the convenience and accessibility which comes with it. </p>
     
             <p>
                 Online banking provides customers with 24/7 access to their accounts, enables them to perform various banking tasks from the comfort of their homes or mobile devices, and often includes features such as easy fund transfers and bill payments. Additionally, the increasing digitalization of financial services and the COVID-19 pandemic may have accelerated the shift toward online banking as customers seek safer and more convenient ways to manage their finances.
             </p>
     
-            <p>However, this plot still does not give insights on the impact this has on personal loan uptake.</p>
+            <p>However, this plot still does not give insights into the impact this has on personal loan uptake.</p>
     
             <pre>
                 <code>
@@ -737,12 +737,12 @@
             <p>Now this plot gives more information. However, it can be seen that there is no direct correlation between people's usage of online banking and their loan uptake. Regardless of opting for loans, more people are using online banking for their daily purposes. We as a financial institution, can focus on leveraging our strong online banking user base as an opportunity to cross-sell or upsell other financial products and services, such as investment products, insurance, or credit cards.</p>
     
     
-            <p>With this, we are done with the in depth analysis of the dataset. We got a lot of insights on the major contributing factors affecting the people's choices on personal loan uptake.</p>
+            <p>With this, we are done with the in-depth analysis of the dataset. We got a lot of insights on the major contributing factors affecting people's choices on personal loan uptake.</p>
         </div>
     
     
         <div class="data_insights">
-            <h2>The insights we have gained to far:</h2>
+            <h2>The insights we have gained so far:</h2>
     
             <p>Here are the insights we have gained so far by the analysis, along with the action plan:</p>
     
@@ -767,7 +767,7 @@
                     <h3>Income Levels Impact Loan Uptake:</h3>
                     <ul>
                         <li>There exists a clear disparity in income between customers with and without personal loans, with customers without personal loans generally having lower income levels.</li>
-                        <li>Further analysis reveals median incomes: Undergraduates ($75,000), Graduates ($48,000), Working Professionals ($51,000).</li>
+                        <li>Further analysis reveals median incomes: Undergraduates ($75,000), Graduates ($48,000), and Working Professionals ($51,000).</li>
                         <li>We can explore the possibility of tailoring loan products and eligibility criteria to cater to a wider income range, ensuring accessibility to customers with diverse financial situations.</li>
                     </ul>
                 </li>
@@ -831,9 +831,9 @@
     
         <h2>Section 2: Machine Learning Forcasting</h2>
     
-        <p>Now that we are done with the in depth analysis of the dataset, we shall now use appropriate ML models to predict wheter a person will opt for a personal loan or not, based on their demographics and other details.</p>
+        <p>Now that we are done with the in-depth analysis of the dataset, we shall now use appropriate ML models to predict whether a person will opt for a personal loan or not, based on their demographics and other details.</p>
     
-        <p>The target 'Personal Loan' will either be a '0' or '1', i.e., the person will or will not take the loan. Therefore, this is a classification problem. We shall start simple with a logistic regressor classifier.</p>
+        <p>The target 'Personal Loan' will either be a '0' or '1', i.e., the person will or will not take the loan. Therefore, this is a classification problem. We shall start simply with a logistic regressor classifier.</p>
     
         <div class="log_reg">
     
@@ -850,7 +850,7 @@
                 </code>
             </pre>
     
-            <p>Now we will import all the necessary libraries inorder to split the training/testing data and to create the model.</p>
+            <p>Now we will import all the necessary libraries in order to split the training/testing data and to create the model.</p>
     
             <pre>
                 <code>
@@ -861,7 +861,7 @@
                 </code>
             </pre>
     
-            <p>There are a few columns which donot in anyway correlate with the personal loan uptake. These are the 'ID' and the 'ZIP Code' columns. Also, we discussed earlier that the 'Experience' and 'Age' columns are correlated with each other a lot. This will skew the model's predictions. Hence we will drop these columns.</p>
+            <p>There are a few columns that do not in any way correlate with the personal loan uptake. These are the 'ID' and the 'ZIP Code' columns. Also, we discussed earlier that the 'Experience' and 'Age' columns are correlated with each other a lot. This will skew the model's predictions. Hence we will drop these columns.</p>
     
             <pre>
                 <code>
@@ -869,7 +869,7 @@
                 </code>
             </pre>
             
-            <p>Now we will create variables 'X' and 'y' which will store the features and the target respectively. Then we split the variables into training and testing dataset with an 80:20 ratio.</p>
+            <p>Now we will create variables 'X' and 'y' which will store the features and the target respectively. Then we split the variables into training and testing datasets with an 80:20 ratio.</p>
     
             <pre>
                 <code>
@@ -879,7 +879,7 @@
                 </code>
             </pre>
     
-            <p>Now we will do something called as feature scaling. This meanstransforming each feature to have a mean of 0 and a standard deviation of 1. This preprocessing step ensures that all features contribute equally to the logistic regression model's learning process and helps prevent issues related to feature scales.</p>
+            <p>Now we will do something called feature scaling. This means transforming each feature to have a mean of 0 and a standard deviation of 1. This preprocessing step ensures that all features contribute equally to the logistic regression model's learning process and helps prevent issues related to feature scales.</p>
     
             <pre>
                 <code>
@@ -918,7 +918,7 @@
             </div>
     
             <p>We can see that the model has an accuracy of 95.4% accuracy, which is pretty good, but it can be better.</p>
-            <p>Also, the confusion matrix provides details which is used for  evaluating the performance of the classification model. Each cell in the matrix represents a specific classification outcome:</p>
+            <p>Also, the confusion matrix provides details that are used for  evaluating the performance of the classification model. Each cell in the matrix represents a specific classification outcome:</p>
     
             <ul>
                 <li>
@@ -938,7 +938,7 @@
                 </li>
             </ul>
     
-            <p>With the creation of model, now we can start predicting outcomes for new feature inputs.</p>
+            <p>With the creation of the model, now we can start predicting outcomes for new feature inputs.</p>
     
             <pre>
                 <code>
@@ -972,7 +972,7 @@
     
             <p>We can see that the model predicts with 0's indicating people not opting for personal loans, and 1's for people opting for personal loans.</p>
     
-            <p>The model which we have created is pretty good at predicting the results, with 95% accuracy. However, it can definitely be increased using more complex models like XGBoost. We will built and score the model, and compare it with the previous model.</p>
+            <p>The model which we have created is pretty good at predicting the results, with 95% accuracy. However, it can definitely be increased using more complex models like XGBoost. We will build and score the model, and compare it with the previous model.</p>
         </div>
     
         <div class="xgb">
@@ -981,7 +981,7 @@
     
             <p>XGBoost (Extreme Gradient Boosting) is a popular machine learning algorithm known for its robustness and high predictive performance. It's an ensemble learning method that combines the outputs of multiple decision trees to make accurate predictions, often excelling in structured data and tabular data tasks such as classification and regression.</p>
     
-            <p>The steps of creating and training the model are the same as from the previous case.</p>
+            <p>The steps of creating and training the model are the same as in the previous case.</p>
     
             <pre>
                 <code>
@@ -1009,7 +1009,7 @@
     
             <p>Here we can see that for the testing dataset, we got an astounding 99% accuracy, which is a huge jump from the previous model. We can also see that in the confusion matrix, the false positives and false negative values are far lesser.</p>
     
-            <p>This high accuracy of the XGBoost model is because of its complexity and non linearity. It can capture complex non-linear relationships in the data by combining multiple decision trees.</p>
+            <p>This high accuracy of the XGBoost model is because of its complexity and non-linearity. It can capture complex non-linear relationships in the data by combining multiple decision trees.</p>
     
             <p>Moreover, XGBoost is an ensemble learning method, which means it combines the predictions of multiple weak learners (trees) to make a final prediction. This ensemble approach tends to reduce overfitting and improve model accuracy.</p>
     
